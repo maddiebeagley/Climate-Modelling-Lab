@@ -16,7 +16,7 @@ file_name = 'clcalipso_CFmon_CESM2_amip_r2i1p1f1_gn_195001-201412.nc'
 
 with Dataset(location + file_name, 'r') as f: 
     print(f.variables.keys())
-    lat = f.variables[ 'lat' ][:]
+    lat = f.variables[ 'lat' ][:] / 1000
     print("Latitude:", lat)
     lon = f.variables[ 'lon' ][:] / 1000
     print("Longitude:", lon)
